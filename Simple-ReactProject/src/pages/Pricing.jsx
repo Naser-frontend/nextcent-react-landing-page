@@ -77,9 +77,11 @@ function Pricing() {
       <section className="bg-gray-50 py-16 sm:py-20">
         <div className="mx-auto w-full max-w-4xl px-6 sm:px-8 lg:px-10">
           <header className="text-center"><p className="text-sm font-semibold uppercase tracking-[0.18em] text-green-600">Compare plans</p><h2 className="mt-3 text-3xl font-bold text-gray-800 sm:text-4xl">Find the right fit</h2></header>
-          <div className="mt-10 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
-            <div className="grid grid-cols-4 border-b border-gray-200 bg-gray-50 px-4 py-4 text-sm font-semibold text-gray-700 sm:px-6"><span>Feature</span><span className="text-center">Starter</span><span className="text-center">Growth</span><span className="text-center">Scale</span></div>
-            {comparisonRows.map((row) => <div key={row[0]} className="grid grid-cols-4 border-b border-gray-100 px-4 py-4 text-sm text-gray-600 last:border-0 sm:px-6"><span className="font-medium text-gray-700">{row[0]}</span>{row.slice(1).map((cell, index) => <span key={index} className="text-center">{cell}</span>)}</div>)}
+          <div className="mt-10 overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+            <div className="min-w-[560px]">
+              <div className="grid grid-cols-4 border-b border-gray-200 bg-gray-50 px-4 py-4 text-sm font-semibold text-gray-700 sm:px-6"><span>Feature</span><span className="text-center">Starter</span><span className="text-center">Growth</span><span className="text-center">Scale</span></div>
+              {comparisonRows.map((row) => <div key={row[0]} className="grid grid-cols-4 border-b border-gray-100 px-4 py-4 text-sm text-gray-600 last:border-0 sm:px-6"><span className="font-medium text-gray-700">{row[0]}</span>{row.slice(1).map((cell, index) => <span key={index} className="text-center">{cell}</span>)}</div>)}
+            </div>
           </div>
         </div>
       </section>
