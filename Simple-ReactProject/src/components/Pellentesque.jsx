@@ -1,7 +1,7 @@
 function Pellentesque() {
   return (
-    <section className="bg-gray-50 px-5 py-12 sm:py-16">
-      <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+    <section className="bg-gray-50 py-12 sm:py-16">
+      <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-6 text-center sm:px-8 lg:px-10">
         <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-gray-800 sm:text-4xl md:text-5xl">
           Pellentesque suscipit
           <br className="hidden sm:block" /> fringilla libero eu.

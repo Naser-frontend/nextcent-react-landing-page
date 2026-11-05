@@ -18,7 +18,7 @@ function Overview() {
           <h2 className="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl">Helping a local <span className="block text-green-600">business reinvent itself</span></h2>
           <p className="mt-3 text-gray-600">We reached here with our hard work and dedication</p>
         </div>
-        <div className="grid grid-cols-2 gap-x-5 gap-y-7 sm:gap-x-8">
+        <div className="grid grid-cols-1 gap-x-5 gap-y-7 min-[420px]:grid-cols-2 sm:gap-x-8">
           {stats.map(([icon, value, label]) => (
             <div key={label} className="flex items-center gap-3">
               <img className="h-10 w-10 object-contain" src={icon} alt="" />

@@ -37,7 +37,7 @@ function Article() {
 
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {articles.map((article) => (
-            <article key={article.title} className="relative pb-16">
+            <article key={article.title} className="relative pb-24 sm:pb-32">
               <img
                 className="h-52 w-full rounded-md object-cover sm:h-48"
                 src={article.image}
