@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/icons/Logo (7).svg";
 
@@ -12,13 +12,21 @@ const navigationLinks = [
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const closeMenu = () => setIsOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => setHasScrolled(window.scrollY > 8);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="relative z-20 w-full border-b border-gray-100 bg-white/95 shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
+    <nav className={`sticky top-0 z-50 w-full border-b backdrop-blur-md transition-all duration-300 ${hasScrolled ? "border-gray-200/40 bg-white/60 shadow-md" : "border-transparent bg-white/35"}`}>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 sm:px-8 lg:px-10">
         <Link to="/" aria-label="Home" className="shrink-0" onClick={closeMenu}>
-          <img src={logo} alt="Nexcent" className="h-8 w-auto sm:h-10" />
+          <img src={logo} alt="Nexcent" className="h-6 w-auto sm:h-7" />
         </Link>
 
         <div className="hidden items-center gap-1 sm:flex sm:gap-2">
@@ -34,7 +42,7 @@ function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="border-t border-gray-100 bg-white px-6 py-4 shadow-lg sm:hidden">
+        <div className="border-t border-gray-200/40 bg-white/75 px-6 py-4 shadow-lg backdrop-blur-md sm:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-1">
             {navigationLinks.map(([label, path]) => <Link key={path} onClick={closeMenu} className="rounded-md px-4 py-3 font-medium text-gray-700 transition hover:bg-green-50 hover:text-green-700" to={path}>{label}</Link>)}
             <Link onClick={closeMenu} className="mt-2 rounded-md bg-green-600 px-4 py-3 text-center font-semibold text-white transition hover:bg-green-700" to="/Register">Register</Link>
