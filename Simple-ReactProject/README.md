@@ -1,16 +1,65 @@
-# React + Vite
+# Nextcent Community Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React practice project for **Nextcent**, a concept website for clubs, membership organisations, and communities. The site presents tools for managing members, payments, bookings, and community growth.
 
-Currently, two official plugins are available:
+> This is a front-end learning project. Registration, newsletter, and pricing interactions are demonstrations and are not connected to a backend or payment service.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Pages
 
-## React Compiler
+- **Home** — product introduction, community types, highlights, and customer stories
+- **Features** — an overview of the platform's tools
+- **Community** — information for clubs, associations, and member organisations
+- **Blog** — sample articles with search and category filters
+- **Pricing** — sample plans with monthly and yearly price selection
+- **Register** — a client-side registration form with basic browser validation
+- **404 page** — a friendly page for unknown routes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Built with
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Tailwind CSS
+- React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting started
+
+You'll need Node.js and npm installed.
+
+```bash
+git clone <repository-url>
+cd <repository-folder>
+npm install
+npm run dev
+```
+
+Vite prints the local development URL in the terminal after the server starts.
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Check the source files with ESLint |
+
+## Project structure
+
+```text
+src/
+├── components/   # Shared UI and Home page sections
+├── pages/        # Route pages
+├── Routes/       # React Router configuration
+└── assets/       # Images and SVG icons
+```
+
+## Learning goals
+
+- Build reusable React components
+- Create responsive layouts with Tailwind CSS
+- Set up client-side routes with React Router
+- Manage simple UI state for filters, billing selection, and forms
+
+## Personal information
+
+You don't need to add private details to this README. If you'd like to present the project in a portfolio, you can optionally add your name, GitHub profile, or a public demo link here.
