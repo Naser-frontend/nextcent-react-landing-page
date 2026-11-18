@@ -1,4 +1,5 @@
 # Nextcent Community Platform
+live Demo: https://naser-frontend.github.io/nextcent-react-landing-page/
 
 A responsive React practice project for **Nextcent**, a concept website for clubs, membership organisations, and communities. The site presents tools for managing members, payments, bookings, and community growth.
 
